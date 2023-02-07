@@ -26,6 +26,7 @@ function detalleCompra(evento) {
 }
 
 function mostrarDetalle(autoId, mostrar) {
+  /* Función para ocultar el auto del detalle de compra si la cantidad es = 0*/
   let detalles = document.getElementsByClassName("detalle-" + autoId)
   for (var key in detalles) detalles[key].hidden = mostrar;
 }
