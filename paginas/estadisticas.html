@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadisticas Fenix</title>
+
+    <link href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estadistica.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Roboto:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .titulo {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        #tituloscol {
+            text-align: center;
+            background-color: rgb(240, 181, 130);
+        }
+
+        body {
+            font-family: 'roboto';
+        }
+    </style>
+</head>
+<h1 class="titulo"> Estadisticias de venta </h1>
+
+<body>
+    <table id="example" class="display" style="width:100%">
+        <thead id="tituloscol">
+            <tr>
+                <th>Producto</th>
+                <th>Comuna despacho</th>
+                <th>Cantidad</th>
+                <th>Valor unitario</th>
+                <th>Total venta</th>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Modelo auto 1</td>
+                <td>Valparaíso</td>
+                <td id="cell1_1">1</td>
+                <td id="cell2_1">1500000</td>
+                <td id="resultCell_1"></td>
+                <td>Sin stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 2</td>
+                <td>Viña del mar</td>
+                <td id="cell1_2">1</td>
+                <td id="cell2_2">12000000</td>
+                <td id="resultCell_2"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 3</td>
+                <td>Quilpué</td>
+                <td id="cell1_3">1</td>
+                <td id="cell2_3">9000000</td>
+                <td id="resultCell_3"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 4</td>
+                <td>Villa Alemana</td>
+                <td id="cell1_4">1</td>
+                <td id="cell2_4">7500000</td>
+                <td id="resultCell_4"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 5</td>
+                <td>Viña del mar</td>
+                <td id="cell1_5">1</td>
+                <td id="cell2_5">9700000</td>
+                <td id="resultCell_5"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 6</td>
+                <td>Valparaíso</td>
+                <td id="cell1_6">1</td>
+                <td id="cell2_6">9900000</td>
+                <td id="resultCell_6"></td>
+                <td>Sin stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 7</td>
+                <td>Quillota</td>
+                <td id="cell1_7">1</td>
+                <td id="cell2_7">5700000</td>
+                <td id="resultCell_7"></td>
+                <td>Sin stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 8</td>
+                <td>San Antonio</td>
+                <td id="cell1_8">2</td>
+                <td id="cell2_8">6100000</td>
+                <td id="resultCell_8"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 9</td>
+                <td>Concón</td>
+                <td id="cell1_9">1</td>
+                <td id="cell2_9">14500000</td>
+                <td id="resultCell_9"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 10</td>
+                <td>Valparaíso</td>
+                <td id="cell1_10">2</td>
+                <td id="cell2_10">11800000</td>
+                <td id="resultCell_10"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 1</td>
+                <td>Quillota</td>
+                <td id="cell1_11">2</td>
+                <td id="cell2_11">15000000</td>
+                <td id="resultCell_11"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 2</td>
+                <td>Viña del mar</td>
+                <td id="cell1_12">1</td>
+                <td id="cell2_12">12000000</td>
+                <td id="resultCell_12"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 3</td>
+                <td>Valparaíso</td>
+                <td id="cell1_13">1</td>
+                <td id="cell2_13">9000000</td>
+                <td id="resultCell_13"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 4</td>
+                <td>Quilpué</td>
+                <td id="cell1_14">1</td>
+                <td id="cell2_14">9000000</td>
+                <td id="resultCell_14"></td>
+                <td>Con stock</td>
+            </tr>
+            <tr>
+                <td>Modelo auto 5</td>
+                <td>Viña del mar</td>
+                <td id="cell1_15">1</td>
+                <td id="cell2_15">9700000</td>
+                <td id="resultCell_15"></td>
+                <td>Sin stock</td>
+            </tr>
+
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Producto</th>
+                <th>Comuna despacho</th>
+                <th>Cantidad</th>
+                <th>Valor unitario</th>
+                <th>Total venta</th>
+                <th>Comentarios</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+        for (let i = 1; i <= 15; i++) {
+            let cell1 = document.getElementById("cell1_" + i);
+            let cell2 = document.getElementById("cell2_" + i);
+
+            console.log(cell1)
+            let value1 = parseFloat(cell1.innerText);
+
+            console.log(cell2)
+            let value2 = parseFloat(cell2.innerText);
+
+            let product = value1 * value2;
+
+            let resultCell = document.getElementById("resultCell_" + i);
+            resultCell.innerHTML = product;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

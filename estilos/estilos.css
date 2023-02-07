@@ -1,0 +1,155 @@
+body {
+    background: #ffff;
+    font-family: 'Bebas Neue', 'Source Sans Pro', 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    display: grid;
+}
+
+main {
+    padding-top: 6em;
+}
+
+nav img {
+    width: 100px;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(240, 181, 130);
+    text-align: center;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: 1em;
+    justify-content: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 25px;
+}
+
+td img {
+    width: 7em;
+
+}
+
+.detail-image {
+    height: 100%;
+    width: 12em;
+}
+
+table {
+    text-align: center;
+    background-color: rgb(240, 181, 130);
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+}
+
+
+.principal {
+    padding-top: 250px;
+    padding-bottom: 100px;
+    margin: 0 20% 0 25%;
+}
+
+.inicio-sesion {
+    background-color: #ffff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%),
+        0 8px 16px rgb(0 0 0 / 10%);
+    height: 300px;
+    min-width: 25%;
+}
+
+.inicio-sesion-input {
+    padding: 10px 15px;
+    min-width: 80%;
+}
+
+.entrar {
+    margin: 0 4em;
+    margin-top: 15px;
+}
+
+.pagar {
+    justify-content: center;
+}
+
+.btn-pagar {
+    max-width: 15em;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #f87d10;
+    --bs-btn-border-color: #f87d10;
+    --bs-btn-hover-bg: #f87d10;
+    --bs-btn-hover-border-color: #f87d10;
+    --bs-btn-active-bg: #f87d10;
+    --bs-btn-active-border-color: #f87d10;
+    --bs-btn-disabled-color: #f87d10;
+    --bs-btn-disabled-border-color: #f87d10;
+}
+
+.registro {
+    text-decoration: none;
+    color: #f87d10;
+    font-weight: bold;
+}
+
+
+details {
+    border: 1px solid rgb(240, 181, 130);
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    text-align: center;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid rgb(240, 181, 130);
+    margin-bottom: 0.5em;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    --bs-btn-padding-y: 0.2rem;
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-font-size: 1rem;
+    background-color: rgb(240, 181, 130);
+}
+
+td .btn-primary {
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: black;
+    font-weight: lighter;
+}
+
+.estadisticas {
+    text-decoration: overline;
+    border: 1px solid black;
+}
+

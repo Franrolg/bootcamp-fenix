@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Fenix Autos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/responsividad.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top">
+            <div class="container-fluid">
+                <div class="col-md-2 text-center">
+                    <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt="Logo Fenix Autos"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav col-md-12">
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link" href="index.html">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link" href="#MarcasDistribuidas">MARCAS DISTRIBUIDAS</a>
+                        </li>
+
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link" href="#ComoComprar">CÓMO COMPRAR</a>
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link estadisticas" href="paginas/estadisticas.html">ESTADÍSTICAS</a>
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link" href="#Contacto">CONTACTO</a>
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link" href="paginas/login.html">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="col-12 titulo">LISTADO DE PRODUCTOS</h1>
+
+        <div class="col-12">
+            <details>
+                <summary>Detalle de compra | Cantidad Productos: <span id="resultado">0</span></summary>
+                <div class="card mb-3">
+                    <div class="row g-0" id="carrito-compras">
+
+                    </div>
+
+                </div>
+                <div class="row pagar">
+                    <div class="col-8"></div>
+                    <div class="col-2 pt-2"><span id="total-compra"></span></div>
+                    <div class="col-2"><button type="button" class="btn btn-outline-primary btn-pagar"
+                            onclick="redirigir()">Pagar</button> </div>
+                </div>
+            </details>
+        </div>
+
+        <div class="col-12 mt-4">
+            <div class="row">
+                <div class="col-xl-4 col-md-6">
+                    <table class="table align-middle">
+                        <tbody>
+                            <thead>
+                                <th class="col-3">Imagen referencial</th>
+                                <th class="col-3">Producto</th>
+                                <th class="col-2">Precio</th>
+                                <th class="col-2">Cantidad</th>
+                                <th class="col-2">Descripción</th>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-3 auto-imagen"><img src="imgs/auto1.jpg"></td>
+                                <td class="col-3 modelo">Modelo auto 1</td>
+                                <td class="col-2 precio" id="precio-auto-1">15000000</td>
+                                <td class="col-2"><input type="number" onKeyDown="return false" id="auto-1" value=0
+                                        min="0" max="10" oninput="sumar()">
+                                    <br>
+                                    <button type="button" class="btn btn-primary btn-sm sumar"
+                                        onclick="sumar(event)">+</button>
+                                    <button type="button" class="btn btn-primary btn-sm restar"
+                                        onclick="sumar(event)">-</button>
+                                </td>
+                                <td class="col-2"><a href="#">Más info</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <table class="table align-middle">
+                        <tbody>
+                            <thead>
+                                <th class="col-3">Imagen referencial</th>
+                                <th class="col-3">Producto</th>
+                                <th class="col-2">Precio</th>
+                                <th class="col-2">Cantidad</th>
+                                <th class="col-2">Descripción</th>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-3 auto-imagen"><img src="imgs/auto2.jpg"></td>
+                                <td class="col-3 modelo">Modelo auto 2</td>
+                                <td class="col-2 precio" id="precio-auto-2">12000000</td>
+                                <td class="col-2"><input type="number" onKeyDown="return false" id="auto-2" value=0
+                                        min="0" max="10" oninput="sumar()">
+                                    <br>
+                                    <button type="button" class="btn btn-primary btn-sm sumar"
+                                        onclick="sumar(event)">+</button>
+                                    <button type="button" class="btn btn-primary btn-sm restar"
+                                        onclick="sumar(event)">-</button>
+                                </td>
+
+                                <td class="col-2"><a href="#"> Más info </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <table class="table align-middle">
+                        <tbody>
+                            <thead>
+                                <th class="col-3">Imagen referencial</th>
+                                <th class="col-3">Producto</th>
+                                <th class="col-2">Precio</th>
+                                <th class="col-2">Cantidad</th>
+                                <th class="col-2">Descripción</th>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-3 auto-imagen"><img src="imgs/auto3.jpg"></td>
+                                <td class="col-3 modelo">Modelo auto 3</td>
+                                <td class="col-2 precio" id="precio-auto-3">9000000</td>
+                                <td class="col-2"><input type="number" onKeyDown="return false" id="auto-3" value=0
+                                        min="0" max="10" oninput="sumar()">
+                                    <br>
+                                    <button type="button" class="btn btn-primary btn-sm sumar"
+                                        onclick="sumar(event)">+</button>
+                                    <button type="button" class="btn btn-primary btn-sm restar"
+                                        onclick="sumar(event)">-</button>
+                                </td>
+                                <td class="col-2"><a href="#"> Más info </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <table class="table align-middle">
+                        <tbody>
+                            <thead>
+                                <th class="col-3">Imagen referencial</th>
+                                <th class="col-3">Producto</th>
+                                <th class="col-2">Precio</th>
+                                <th class="col-2">Cantidad</th>
+                                <th class="col-2">Descripción</th>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-3 auto-imagen"><img src="imgs/auto4.jpg"></td>
+                                <td class="col-3 modelo">Modelo auto 4</td>
+                                <td class="col-2 precio" id="precio-auto-4">7500000</td>
+                                <td class="col-2"><input type="number" onKeyDown="return false" id="auto-4" value=0
+                                        min="0" max="10" oninput="sumar()">
+                                    <br>
+                                    <button type="button" class="btn btn-primary btn-sm sumar"
+                                        onclick="sumar(event)">+</button>
+                                    <button type="button" class="btn btn-primary btn-sm restar"
+                                        onclick="sumar(event)">-</button>
+                                </td>
+                                <td class="col-2"><a href="#"> Más info </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div>
+                        <table class="table align-middle">
+                            <tbody>
+                                <thead>
+                                    <th class="col-3">Imagen referencial</th>
+                                    <th class="col-3">Producto</th>
+                                    <th class="col-2">Precio</th>
+                                    <th class="col-2">Cantidad</th>
+                                    <th class="col-2">Descripción</th>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-3 auto-imagen"><img src="imgs/auto5.jpg"></td>
+                                    <td class="col-3 modelo">Modelo auto 5</td>
+                                    <td class="col-2 precio" id="precio-auto-5">9700000</td>
+                                    <td class="col-2"><input type="number" onKeyDown="return false" id="auto-5" value=0
+                                            min="0" max="10" oninput="sumar()">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm sumar"
+                                            onclick="sumar(event)">+</button>
+                                        <button type="button" class="btn btn-primary btn-sm restar"
+                                            onclick="sumar(event)">-</button>
+                                    </td>
+                                    <td class="col-2"><a href="#"> Más info </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div>
+                        <table class="table align-middle">
+                            <tbody>
+                                <thead>
+                                    <th class="col-3">Imagen referencial</th>
+                                    <th class="col-3">Producto</th>
+                                    <th class="col-2">Precio</th>
+                                    <th class="col-2">Cantidad</th>
+                                    <th class="col-2">Descripción</th>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-3 auto-imagen"><img src="imgs/auto6.jpg"></td>
+                                    <td class="col-3 modelo">Modelo auto 6</td>
+                                    <td class="col-2 precio" id="precio-auto-6">9900000</td>
+                                    <td class="col-2"><input type="number" onKeyDown="return false" id="auto-6" value=0
+                                            min="0" max="10" oninput="sumar()">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm sumar"
+                                            onclick="sumar(event)">+</button>
+                                        <button type="button" class="btn btn-primary btn-sm restar"
+                                            onclick="sumar(event)">-</button>
+                                    </td>
+                                    <td class="col-2"><a href="#"> Más info </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <div>
+                        <table class="table align-middle">
+                            <tbody>
+                                <thead>
+                                    <th class="col-3">Imagen referencial</th>
+                                    <th class="col-3">Producto</th>
+                                    <th class="col-2">Precio</th>
+                                    <th class="col-2">Cantidad</th>
+                                    <th class="col-2">Descripción</th>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-3 auto-imagen"><img src="imgs/auto7.jpg"></td>
+                                    <td class="col-3 modelo">Modelo auto 7</td>
+                                    <td class="col-2 precio" id="precio-auto-7">5700000</td>
+                                    <td class="col-2"><input type="number" onKeyDown="return false" id="auto-7" value=0
+                                            min="0" max="10" oninput="sumar()">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm sumar"
+                                            onclick="sumar(event)">+</button>
+                                        <button type="button" class="btn btn-primary btn-sm restar"
+                                            onclick="sumar(event)">-</button>
+                                    </td>
+                                    <td class="col-2"><a href="#"> Más info </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div>
+                        <table class="table align-middle">
+                            <tbody>
+                                <thead>
+                                    <th class="col-3">Imagen referencial</th>
+                                    <th class="col-3">Producto</th>
+                                    <th class="col-2">Precio</th>
+                                    <th class="col-2">Cantidad</th>
+                                    <th class="col-2">Descripción</th>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-3 auto-imagen"><img src="imgs/auto8.jpg"></td>
+                                    <td class="col-3 modelo">Modelo auto 8</td>
+                                    <td class="col-2 precio" id="precio-auto-8">6100000</td>
+                                    <td class="col-2"><input type="number" onKeyDown="return false" id="auto-8" value=0
+                                            min="0" max="10" oninput="sumar()">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm sumar"
+                                            onclick="sumar(event)">+</button>
+                                        <button type="button" class="btn btn-primary btn-sm restar"
+                                            onclick="sumar(event)">-</button>
+                                    </td>
+                                    <td class="col-2"><a href="#"> Más info </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div>
+                        <table class="table align-middle">
+                            <tbody>
+                                <thead>
+                                    <th class="col-3">Imagen referencial</th>
+                                    <th class="col-3">Producto</th>
+                                    <th class="col-2">Precio</th>
+                                    <th class="col-2">Cantidad</th>
+                                    <th class="col-2">Descripción</th>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-3 auto-imagen"><img src="imgs/auto9.jpg"></td>
+                                    <td class="col-3 modelo">Modelo auto 9</td>
+                                    <td class="col-2 precio" id="precio-auto-9">14500000</td>
+                                    <td class="col-2"><input type="number" onKeyDown="return false" id="auto-9" value=0
+                                            min="0" max="10" oninput="sumar()">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm sumar"
+                                            onclick="sumar(event)">+</button>
+                                        <button type="button" class="btn btn-primary btn-sm restar"
+                                            onclick="sumar(event)">-</button>
+                                    </td>
+                                    <td class="col-2"><a href="#"> Más info </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <div>
+                        <table class="table align-middle">
+                            <tbody>
+                                <thead>
+                                    <th class="col-3">Imagen referencial</th>
+                                    <th class="col-3">Producto</th>
+                                    <th class="col-2">Precio</th>
+                                    <th class="col-2">Cantidad</th>
+                                    <th class="col-2">Descripción</th>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-3 auto-imagen"><img src="imgs/auto10.jpg"></td>
+                                    <td class="col-3 modelo">Modelo auto 10</td>
+                                    <td class="col-2 precio" id="precio-auto-10">11800000</td>
+                                    <td class="col-2"><input type="number" onKeyDown="return false" id="auto-10" value=0
+                                            min="0" max="10" oninput="sumar()">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm sumar"
+                                            onclick="sumar(event)">+</button>
+                                        <button type="button" class="btn btn-primary btn-sm restar"
+                                            onclick="sumar(event)">-</button>
+                                    </td>
+                                    <td class="col-2"><a href="#"> Más info </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+
+    <script>
+        let listaPrecios = document.getElementsByClassName('precio');
+        for (let i = 0; i < listaPrecios.length; i++) {
+            listaPrecios[i].innerText = "$" + listaPrecios[i].innerText;
+        }
+    </script>
+
+    <script src="js/logica.js"></script>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

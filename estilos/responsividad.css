@@ -1,0 +1,15 @@
+@media only screen and (max-width: 768px) {
+    .fixed-top {
+        position: relative;
+    }
+
+    main {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .principal{
+        padding-top: 100px;
+    }
+}

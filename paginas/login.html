@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Fenix Autos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="../estilos/responsividad.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <div class="grid text-center principal">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-12">
+                    <div class="logo">
+                        <a href="../index.html"><img src="../imgs/logo.png" alt="Logo Fenix Autos"></a>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-12">
+                    <div class="inicio-sesion">
+                        <div class="inicio-sesion-input">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre-usuario" placeholder="nombreUsuario" required>
+                                <label for="nombre-usuario">Nombre de usuario</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Password" required>
+                                <label for="password">Contraseña</label>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary entrar" onclick="validarUsuario()">Entrar</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <div>
+                                <p>¿No tienes cuenta? <a class="registro" href="#">Resgistrate</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <script src="../js/login.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
